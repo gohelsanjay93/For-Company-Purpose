@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;  
+    box-sizing: border-box;  
+}
+.row-no-padding > [class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}      
+.navbar-toggler
+{
+    background-color: chartreuse;
+}
+nav a{
+    color: white;
+}
+header{
+    color: white;
+    height: 40vh;
+    width: 100%;
+    background-color: chartreuse;
+    position: relative;
+}
+header::after{
+    content: '';    
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: inherit;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    transform-origin: top right;
+    transform: skewY(-2deg);
+}
+header>.navbar
+{
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    background-color: chartreuse;
+}
+.banner{
+    height: 30vh;
+}
+.features,.people{
+    margin-top: 100px;
+    text-align: center;
+}
+.showcase{
+    height: auto;
+}
+.showcaseimage{
+    height: inherit;
+}
+.footer1{
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    background-image: url(images/water.jpg);
+    background-size: cover;
+}
+.footer2{
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 22vh;
+    background-color: black;
+}
+@media only screen and (max-width: 900px) {
+    header::after{
+        content: '';    
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: inherit;
+    top: 100px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    transform-origin: top right;
+    transform: skewY(-2deg);
+    }
+    .features{
+        margin-top: 200px;
+    }
+
+}
